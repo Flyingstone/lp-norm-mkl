@@ -1,0 +1,29 @@
+Important Folders :
+code\
+	full_cvx.m - code for the reduced version of the optimization problem solved via cvx
+	cuttingplane_cvx.m - code for the 2-part optimization problem where the intermediate optimization problems are solved via cvx
+	cuttingplane_sedumi.m - code for the 2-part optimization problem where the optimization problem involving alpha is directly solved and the optimization problem involving theta is solved using SeDuMi
+	runRegressionTest - code that generates gaussian data, creates kernels and runs the optimization algorithms
+		1. How to Run?
+		> testtype = ?; codevector = [1 1 1]; runRegressionTest
+		where testtype can take value between 1 to 5
+		2. How to look at the regression plot?
+		> plot(x, y, x, ypred1, x, ypred2, x, ypred3)
+		ypred1 holds predictions from full cvx, ypred2 holds predictions from 2-part cvx, ypred3 holds predictions from sedumi based cutting plane
+		3. How to check the optimal values?
+		> [eta1 eta2 eta3]
+		eta1 is optimal value from full cvx, eta2 is optimal value from 2-part cvx, eta3 is optimal value from sedumi based cutting plane
+		4. How to check optimal solutions?
+		> [theta1 theta2 theta3]
+		> [alpha1 alpha2 alpha3]
+		as before (theta1, alpha1) obtained from full cvx and so on.
+
+report\
+	reportVersion3.tex - the final version of the report
+	reportVersion3.pdf - the report pdf file
+
+papers\
+	papers that are related to the given problem
+
+sandbox\
+	some of the testing code written
